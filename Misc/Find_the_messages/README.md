@@ -74,11 +74,11 @@ $ hexdump -C message_2_of_3.png -n 16
 $ file message_2_of_3.png
 message_2_of_3.png: PNG image data, 5003 x 2239, 8-bit/color RGB, non-interlaced
 ```
-
-これでちゃんとPNGとして認識してくれたので
-
 ![message_2_of_3.png](Export/message_2_of_3.png)
 
+これでちゃんとPNGとして認識してくれた
+
+次に`message_3_of_3.pdf`
 
 ![Clipboard02.jpg](Clipboard02.jpg)
 
