@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>SECCON Goods</title>
+    <link rel="stylesheet" href="css/style.css" charset="utf-8">    
+    <link rel="stylesheet" href="css/bootstrap.min.css" charset="utf-8">
+    <script src="js/bootstrap.min.js"></script>
+
+    <script src="js/vue.min.js"></script>    
+    <script src="js/axios.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand">SECCON Goods</a>
+        </div>
+      </div>
+    </header>
+    
+    <main role="main">
+      <div class="container">
+        <div class="row">
+          <div class="col-12" id="view_root">
+            <div class="jumbotron">
+              <h1 class="display-4">SECCON Goods</h1>
+              <p class="lead">SECCON グッズたちの在庫情報です。</p>
+              <hr class="my-4">
+              <p>SECCON には在庫限りのグッズがたくさんあります。在庫一覧を用意しましたので、ぜひ各地で開催される SECCON Beginners はじめ SECCON 関連イベントでお買い求めください！</p>
+            </div>
+
+            <table>
+              <thead>
+                <tr>
+                  <th v-for="column in columns"> {{ column }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="item in items">
+                  <td> {{ item.name  }}  </td>
+                  <td> {{ item.description  }}  </td>
+                  <td> {{ item.price  }}  </td>
+                  <td> {{ item.stock  }}  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/init.js"></script>
+  </body>
+</html>
