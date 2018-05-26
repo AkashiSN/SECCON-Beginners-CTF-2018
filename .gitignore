@@ -1,0 +1,3 @@
+*.img
+*.gdb_history
+peda-session-*
